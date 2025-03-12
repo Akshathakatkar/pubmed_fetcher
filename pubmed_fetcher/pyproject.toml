@@ -1,0 +1,21 @@
+[project]
+name = "pubmed-fetcher"
+version = "0.1.0"
+description = "Tool to fetch research papers from PubMed."
+authors = [
+    { name = "Akshatha Katkar", email = "akshukatkar1@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.13"
+
+[tool.poetry.dependencies]
+pandas = ">=2.2.3,<3.0.0"
+xmltodict = ">=0.14.2,<0.15.0"
+requests = ">=2.32.3,<3.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher.cli:main"
